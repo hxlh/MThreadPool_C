@@ -1,10 +1,13 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.0.0)
+project(threadpool_c VERSION 0.1.0)
 
-project(threadPool LANGUAGES CXX)
+include(CTest)
+enable_testing()
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(threadpool_c main.c
+threadpool.h
+)
 
-add_executable(threadPool main.cpp
-    thread.h
-    )
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
