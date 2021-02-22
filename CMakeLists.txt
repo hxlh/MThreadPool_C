@@ -5,7 +5,7 @@ include(CTest)
 enable_testing()
 
 add_executable(threadpool_c main.c
-threadpool.h
+threadpool.c
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
